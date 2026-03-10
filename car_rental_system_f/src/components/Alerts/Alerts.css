@@ -1,0 +1,72 @@
+.alerts-container {
+  position: fixed;
+  top: 90px;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.alert-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  border-left: 6px solid #0d6efd;
+  animation: slideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.alert-content {
+  display: flex;
+  gap: 12px;
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+}
+
+.alert-type {
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #6c757d;
+  margin-bottom: 2px;
+}
+
+.alert-message {
+  font-size: 0.9rem;
+  color: #212529;
+  line-height: 1.4;
+}
+
+.close-alert-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #dee2e6;
+  cursor: pointer;
+  padding: 0 5px;
+  transition: color 0.2s;
+  margin-top: -5px;
+}
+
+.close-alert-btn:hover {
+  color: #dc3545;
+}
+
+/* Status Specific Colors */
+.alert-card.booking_request { border-left-color: #f39c12; }
+.alert-card.booking_confirmed { border-left-color: #198754; }
+.alert-card.booking_rejected { border-left-color: #dc3545; }
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

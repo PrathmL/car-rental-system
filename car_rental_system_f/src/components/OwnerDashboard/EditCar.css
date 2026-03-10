@@ -1,0 +1,55 @@
+.edit-car-section h2 {
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.edit-car-form {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 650px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.update-btn {
+  flex: 2;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.update-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+}
+
+.cancel-btn:hover {
+  background-color: #f1f5f9;
+  color: var(--text-main);
+}

@@ -1,0 +1,108 @@
+.dashboard-wrapper {
+  background-color: var(--bg-body);
+  min-height: 100vh;
+  display: flex;
+}
+
+.glass-sidebar {
+  width: 280px;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-soft);
+}
+
+.sidebar-brand-box {
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-nav-list {
+  padding: 1.5rem 1rem;
+  flex: 1;
+}
+
+.sidebar-link-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  transition: var(--transition-fast);
+  text-align: left;
+}
+
+.sidebar-link-btn:hover {
+  background: var(--primary-soft);
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.sidebar-link-btn.active {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 10px 20px -5px rgba(13, 110, 253, 0.3);
+}
+
+.sidebar-user-card {
+  margin: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-body);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.dashboard-main-content {
+  flex: 1;
+  padding: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.content-fade-in {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 992px) {
+  .dashboard-wrapper {
+    flex-direction: column;
+  }
+  .glass-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .sidebar-nav-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem;
+  }
+  .sidebar-link-btn {
+    white-space: nowrap;
+    padding: 0.8rem 1.2rem;
+  }
+  .sidebar-user-card {
+    display: none;
+  }
+}

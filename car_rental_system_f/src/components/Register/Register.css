@@ -1,0 +1,144 @@
+.register-wrapper {
+  min-height: 100vh;
+  display: flex;
+  background-color: #ffffff;
+}
+
+/* Left Side: Brand Visual */
+.register-side-visual {
+  flex: 1;
+  background: linear-gradient(rgba(0, 102, 255, 0.8), rgba(0, 82, 204, 0.9)), 
+              url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2083') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  color: white;
+}
+
+.register-side-visual h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(10px);
+}
+
+.benefit-icon-pulse {
+  display: inline-block;
+  animation: iconPulse 2s infinite ease-in-out;
+}
+
+@keyframes iconPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Right Side: Form Content */
+.register-side-form {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
+  overflow-y: auto;
+}
+
+.register-card-modern {
+  width: 100%;
+  max-width: 550px;
+  background: white;
+  padding: 3.5rem;
+  border-radius: 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+}
+
+.step-indicator-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 15px rgba(0, 102, 255, 0.4);
+}
+
+.role-option-card {
+  cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 2px solid #f1f5f9;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: #fcfdfe;
+}
+
+.role-option-card.active {
+  border-color: var(--primary-color);
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 102, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.upload-area-premium {
+  border: 2px dashed #cbd5e1;
+  border-radius: 20px;
+  padding: 2.5rem;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-area-premium:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-soft);
+}
+
+.form-control-premium {
+  height: 60px;
+  border-radius: 14px;
+  border: 1.5px solid #e2e8f0;
+  background: #fcfdfe;
+  padding: 0 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.form-control-premium:focus {
+  border-color: var(--primary-color);
+  background: white;
+  box-shadow: 0 0 0 4px var(--primary-soft);
+  outline: none;
+}
+
+@media (max-width: 1100px) {
+  .register-side-visual { display: none; }
+  .register-side-form { flex: 1; padding: 2rem 1rem; }
+}

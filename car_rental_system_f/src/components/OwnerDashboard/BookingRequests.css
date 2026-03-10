@@ -1,0 +1,52 @@
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.requests-table th, .requests-table td {
+  padding: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.requests-table th {
+  background-color: #f8f9fa;
+  color: #34495e;
+}
+
+.status-tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.status-tag.pending { background-color: #fff4e5; color: #f39c12; }
+.status-tag.confirmed { background-color: #e1f7e7; color: #2ecc71; }
+
+.row-btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.approve-btn {
+  padding: 0.4rem 0.8rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reject-btn {
+  padding: 0.4rem 0.8rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

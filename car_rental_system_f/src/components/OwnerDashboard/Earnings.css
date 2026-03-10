@@ -1,0 +1,43 @@
+.earnings-section {
+  padding: 1rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  border: 1px solid var(--border-color);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.stat-card.highlight {
+  border-bottom: 4px solid #2ecc71;
+}
+
+.stat-card.highlight h3 {
+  color: #2ecc71;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--border-color);
+}
+
+.recharts-default-tooltip {
+  border: none !important;
+  box-shadow: var(--shadow-soft) !important;
+  border-radius: 12px !important;
+  background-color: var(--bg-surface) !important;
+}
+
+.card-modern h5 {
+  color: var(--text-main);
+  letter-spacing: -0.2px;
+}
